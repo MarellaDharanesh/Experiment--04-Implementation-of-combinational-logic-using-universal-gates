@@ -57,22 +57,26 @@ output f2;
 assign f2 = (w&y)|(x&y)|(~y&z);
 endmodule
 ```
-## Developed by: Marella Dharanesh
-## RegisterNumber: 212222240062
+
 
 
 
 ## Output:
 ## F1
 ### RTL realization:
-![OUTPUT](/de%20ex-2.1.png)
+![de ex-2 1](https://user-images.githubusercontent.com/118707669/234770638-5f66b25a-6cb4-4361-ac6e-ebebd1fa4c27.png)
+
 
 ## Timing Diagram
-![OUTPUT](/de%20ex-2%201.1.png)
+![de ex-2 1 1](https://user-images.githubusercontent.com/118707669/234770668-4c0f94ae-f57d-461b-b83e-064668914725.png)
+
+
 ## F2:
 ### RTL realization
-![OUTPUT](/de%20ex-2.2.png)
+![de ex-2 2](https://user-images.githubusercontent.com/118707669/234770764-2b64b733-7e90-4fcb-9a8e-959044075481.png)
+
 ### Timing Diagram
-![OUTPUT](/de%20ex-2%202.1.png)
+![de ex-2 2 1](https://user-images.githubusercontent.com/118707669/234770789-045b6259-656c-40ac-bbf4-a6d1e157cafe.png)
+
 ## Result:
 Thus the given logic functions are implemented using  and their operations are verified using Verilog programming.

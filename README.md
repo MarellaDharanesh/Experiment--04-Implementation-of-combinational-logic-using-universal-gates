@@ -1,43 +1,78 @@
-# Experiment--04-Implementation-of-combinational-logic-using-universal-gates
-Implementation of combinational logic using universal-gates
+# Experiment--02-Implementation-of-combinational-logic
+Implementation of combinational logic gates
  
 ## AIM:
-To implement the given logic function using NAND and NOR gates and to verify its operation in Quartus using Verilog programming.
-
-F=((C'.B.A)'(D'.C.A)'(C.B'.A)')' using NAND gate
-F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')' using NOR gate
+To implement the given logic function verify its operation in Quartus using Verilog programming.
+ F1= A’B’C’D’+AC’D’+B’CD’+A’BCD+BC’D
+F2=xy’z+x’y’z+w’xy+wx’y+wxy
+ 
+ 
+ 
 ## Equipments Required:
 ## Hardware – PCs, Cyclone II , USB flasher
 ## Software – Quartus prime
 
 
 ## Theory
-Logic gates are electronic circuits which perform logical functions on one or more inputs to produce one output. 
-
-## Using NAND gates
-NAND gate is actually a combination of two logic gates i.e. AND gate followed by NOT gate. So its output is complement of the output of an AND gate.This gate can have minimum two inputs, output is always one. By using only NAND gates, we can realize all logic functions: AND, OR, NOT, X-OR, X-NOR, NOR. So this gate is also called as universal gate. First note that the entire expression is inverted and we have three terms ANDed. This means that we must use a 3-input NAND gate. Each of the three terms is, itself, a NAND expression. Finally, negated single terms can be generates with a 2-input NAND gate acting as an inverted.
-
-F=((C'.B.A)'(D'.C.A)'(C.B'.A)')'
+ Logic gates are electronic circuits which perform logical functions on one or more inputs to produce one output.
 
 ## Logic Diagram
+## Procedure:
+### step-1
 
-Using NOR gates
-NOR gate is actually a combination of two logic gates: OR gate followed by NOT gate. So its output is complement of the output of an OR gate. This gate can have minimum two inputs, output is always one. By using only NOR gates, we can realize all logic functions: AND, OR, NOT, Ex-OR, Ex-NOR, NAND. So this gate is also called universal gate. Designing a circuit with NOR gates only uses the same basic techniques as designing a circuit with NAND gates; that is, the application of deMorgan’s theorem. The only difference between NOR gate design and NAND gate design is that the former must eliminate product terms and the later must eliminate sum terms.
+Create a project with required entities.
+### step-2
 
-F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
+Create a module along with respective file name.
+### step-3
 
-## Logic Diagram
-## Procedure
+Run the respective programs for the given boolean equations.
+### step-4
+
+Run the module and get the respective RTL outputs.
+### step-5
+
+Create university program(VWF) for getting timing diagram.
+### step-6
+Give the respective inputs for timing diagram and obtain the results.
 ## Program:
-/*
-Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-## RTL realization
+### Developed by: Harsha vardhan
+### RegisterNumber: 212222240114 
+
+
+Program to implement the given logic function and to verify its operations in quartus using Verilog programming.
+### F1:
+```python
+module dd (a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+assign f1 = (~b&~d)|(~a&b&d)|(a&b&~c);
+endmodule 
+```
+### F2:
+```python
+module dd (w,x,,y,z,f2);
+input w,x,y,z;
+output f2;
+assign f2 = (w&y)|(x&y)|(~y&z);
+endmodule
+```
+## Developed by: Marella Dharanesh
+## RegisterNumber: 212222240062
+
+
 
 ## Output:
-## RTL
+## F1
+### RTL realization:
+![OUTPUT](/de%20ex-2.1.png)
+
 ## Timing Diagram
+![OUTPUT](/de%20ex-2%201.1.png)
+## F2:
+### RTL realization
+![OUTPUT](/de%20ex-2.2.png)
+### Timing Diagram
+![OUTPUT](/de%20ex-2%202.1.png)
 ## Result:
-Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
+Thus the given logic functions are implemented using  and their operations are verified using Verilog programming.
